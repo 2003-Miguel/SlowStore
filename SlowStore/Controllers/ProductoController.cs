@@ -15,17 +15,13 @@ namespace SlowStore.Controllers
 
         public IActionResult Index()
         {
-            // Mal rendimiento: carga todos los productos con ToList() y luego filtra
-            var productos = _context.Productos.ToList();
-
-            var productosCaros = new List<Producto>();
-            foreach (var p in productos)
-            {
-                if (p.Precio > 1000)
-                {
-                    productosCaros.Add(p); // lógica ineficiente
-                }
-            }
+            // Consulta optimizada: filtra y pagina directamente en la base de datos
+            var productosCaros = _context.Productos
+                .Where(p => p.Precio > 1000)
+                .OrderBy(p => p.Id) // Recomendado para paginación consistente
+                .Skip(0)
+                .Take(10)
+                .ToList();
 
             return View(productosCaros);
         }
