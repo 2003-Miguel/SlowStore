@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SlowStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f25a3d0f3e1ba2f34eec607232b3f132a0a08c67")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+747d0215f20bbd49d538daa17fea44bce37aeefa")]
 [assembly: System.Reflection.AssemblyProductAttribute("SlowStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SlowStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
