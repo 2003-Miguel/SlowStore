@@ -1,0 +1,24 @@
+﻿@model List<SlowStore.Models.Producto>
+
+<h2>Productos Caros</h2>
+
+<!-- Carga innecesaria: imagen pesada no optimizada -->
+<img src="/images/imagen.jpg" alt="Imagen de prueba" style="width:100%; max-width:800px;" />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model)
+        {
+            <tr>
+                <td>@producto.Nombre</td>
+                <td>@producto.Precio</td>
+            </tr>
+        }
+    </tbody>
+</table>
